@@ -1,110 +1,176 @@
--- 테스트
-select * from tab;
+--drop table emp;
+CREATE TABLE emp ( 
+  empno     number primary key, 
+  ename     varchar2(50), 
+  job       varchar2(50), 
+  mgr       number, 
+  hiredate  date default sysdate, 
+  sal       number,
+  comm      number, 
+  deptno    number);
 
--- python에서 만든 테이블 확인
-select * from iris;
-desc iris;
+insert into emp values (7369,'이철수','사원',7902,'2010-12-17',300,null,20);
+insert into emp values (7499,'이민수','대리',7698,'2011-02-20',360,300,30);
+insert into emp values (7521,'박종수','대리',7698,'2012-02-22',425,500,30);
+insert into emp values (7566,'임성민','팀장',7839,'2011-04-02',597,null,20);
+insert into emp values (7654,'나호석','대리',7698,'2011-09-28',425,1400,30);
+insert into emp values (7698,'박성환','팀장',7839,'2021-05-01',585,null,30);
+insert into emp values (7782,'손기철','팀장',7839,'2021-06-09',545,null,10);
+insert into emp values (7788,'박기호','부장',7566,'2007-04-17',600,null,20);
+insert into emp values (7839,'김철수','대표',null,'2011-11-17',900,null,10);
+insert into emp values (7844,'송명준','대리',7698,'2011-09-08',450,0,30);
+insert into emp values (7876,'황선태','사원',7788,'2017-05-23',310,null,20);
+insert into emp values (7900,'박민철','사원',7698,'2011-12-03',395,null,30);
+insert into emp values (7902,'박희성','부장',7566,'2011-12-03',700,null,20);
+insert into emp values (7934,'최철수','사원',7782,'2012-01-23',330,null,10);
 
--- 항공운항 테이블 생성
-create table ontime (
-  Year int,
-  Month int,
-  DayofMonth int,
-  DayOfWeek int,
-  DepTime  varchar(50),
-  CRSDepTime int,
-  ArrTime varchar(50),
-  CRSArrTime int,
-  UniqueCarrier varchar(5),
-  FlightNum varchar(50),
-  TailNum varchar(8),
-  ActualElapsedTime varchar(50),
-  CRSElapsedTime varchar(50),
-  AirTime varchar(50),
-  ArrDelay varchar(50),
-  DepDelay varchar(50),
-  Origin varchar(3),
-  Dest varchar(3),
-  Distance varchar(50),
-  TaxiIn varchar(50),
-  TaxiOut varchar(50),
-  Cancelled varchar(50),
-  CancellationCode varchar(1),
-  Diverted varchar(1),
-  CarrierDelay varchar(50),
-  WeatherDelay varchar(50),
-  NASDelay varchar(50),
-  SecurityDelay varchar(50),
-  LateAircraftDelay varchar(50)
+
+--drop table dept;
+CREATE TABLE dept (
+  deptno   number primary key, 
+  dname    varchar2(50));
+
+insert into dept values (10,'교육팀');
+insert into dept values (20,'홍보팀');
+insert into dept values (30,'기획팀');
+insert into dept values (40,'전산팀');
+
+
+
+
+--drop table prof ;
+create table prof(
+ profno number primary key,
+ pname  varchar2(10) not null, 
+ position varchar2(20) not null,
+ pay number(3) not null,
+ hiredate  date not null,
+ bonus number(4) ,
+ majorno  number(3)
 );
 
--- ontime.ctl로 만든 테이블 확인
-select * from ontime;
+insert into prof
+values(1001,'조재철','정교수',550,'2007-06-23',100,101);
 
--- index 생성
-create index year on ontime(year);
-create index month on ontime(year,month);
-create index day on ontime(year, month, dayofmonth);
-create index dayofweek on ontime(dayofweek);
-create index distance on ontime(distance);
-create index uniquecarrier on ontime(uniquecarrier);
-create index origin on ontime(origin);
-create index dest on ontime(dest);
+insert into prof
+values(1002,'박철호','부교수',380,'2016-01-30',60,101);
 
--- 탐색
-select count(*) from ontime
-where year=2007 and month=1 and dayofmonth=1;
+insert into prof
+values (1003,'송기영','조교수',270,'2019-03-22',null,101);
 
--- 항공사 테이블 생성
-create table carrier(
-code varchar2(100),
-description varchar2(500)
+insert into prof
+values (2001,'양희선','조교수',250,'2017-09-01',null,102);
+
+insert into prof
+values (2002,'김영준','부교수',350,'2015-11-30',80,102);
+
+insert into prof
+values (2003,'주영호','정교수',490,'2008-04-29',90,102);
+
+insert into prof
+values (3001,'김대진','정교수',530,'2005-10-23',110,103);
+
+insert into prof
+values (3002,'나연수','조교수',330,'2018-07-01',50,103);
+
+insert into prof
+values (3003,'김현욱','조교수',290,'2019-02-24',null,103);
+
+insert into prof
+values (4001,'심상수','정교수',570,'2001-10-23',130,201);
+
+insert into prof
+values (4002,'최선영','조교수',330,'2019-08-30',null,201);
+
+insert into prof
+values (4003,'박원희','조교수',310,'2019-12-01',50,202);
+
+insert into prof
+values (4004,'차영철','조교수',260,'2019-01-28',null,202);
+
+insert into prof
+values (4005,'이지성','정교수',500,'2005-09-18',80,203);
+
+insert into prof 
+values (4006,'전민호','조교수',220,'2020-06-28',null,301);
+
+insert into prof
+values (4007,'허영선','부교수',290,'2011-05-23',30,301);
+
+--drop table major ;
+create table major
+( majorno number(3) primary key ,
+  mname varchar2(30) not null
 );
 
--- carrier.ctl로 만든 테이블 확인
-select * from carrier;
+insert into major values (101,'컴퓨터공학');
 
--- index 생성
-create index carrier_code on carrier(code);
+insert into major values (102,'데이터사이언스');
 
--- 결측값 추가
-update ontime set depdelay=0 where depdelay='NA';
+insert into major values (103,'소프트웨어공학');
+
+insert into major values (201,'전자공학');
+
+insert into major values (202,'기계공학');
+
+insert into major values (203,'화학공학');
+
+insert into major values (301,'문헌정보학');
+
+--drop table stud ;
+create table stud
+( studno number primary key,
+  sname   varchar2(10) not null,
+  grade number ,
+  majorno number,
+  profno  number);
+
+insert into stud values (201811,'서정욱',4,101,1001);
+
+insert into stud values (201812,'이재수',4,102,2001);
+
+insert into stud values (201813,'이민경',4,103,3002);
+
+insert into stud values (201814,'김종욱',4,201,4001);
+
+insert into stud values (201815,'박동수',4,202,4003);
+
+insert into stud values (201911,'김선영',3,101,1002);
+
+insert into stud values (201912,'신연경',3,102,2002);
+
+insert into stud values (201913,'오누리',3,202,4003);
+
+insert into stud values (201914,'구자영',3,301,4007);
+
+insert into stud values (201915,'이세현',3,101,4001);
+
+insert into stud values (202011,'송지선',2,101,1002);
+
+insert into stud values (202012,'박진욱',2,102,2001);
+
+insert into stud values (202013,'김광선',2,201,4002);
+
+insert into stud values (202014,'이문호',2,201,4003);
+
+insert into stud values (202015,'박정호',2,301,4007);
+
+insert into stud values (202111,'최윤나',1,101,null);
+
+insert into stud values (202112,'김은수',1,101,null);
+
+insert into stud values (202113,'최영민',1,201,null);
+
+insert into stud values (202114,'박주현',1,102,null);
+
+insert into stud values (202115,'강영준',1,101,null);
+
+
+
 commit;
 
--- 항공사별 출발지연시간 평균
-select uniquecarrier, avg(depdelay)
-from ontime
-group by uniquecarrier;
-
--- 항공사 이름이 나오도록 join
-update ontime set arrdelay=0 where arrdelay='NA';
-commit;
-
--- 시간대별(10월, 월요일에 출발할 때 가장 좋은 시간대는?)
-select a.year, a.uniquecarrier, c.description, count(*)
-from ontime a, carrier c
-where a.uniquecarrier = c.code and a.arrdelay>0
-group by a.year, a.uniquecarrier, c.description
-order by a.year, a.uniquecarrier, c.description;
-
--- 항공사별 출발 지연 시간 평균
-select uniquecarrier, round(avg(depdelay),1)
-from ontime
-group by uniquecarrier;
-
--- 항공사별 도착 지연 시간 평균
-select uniquecarrier, round(avg(arrdelay),1)
-from ontime
-group by uniquecarrier;
-
-select * 
-from (
-    select rownum as rn, A.*
-    from (
-        select CRSDepTime, avg(arrdelay) arrdelay
-        from ontime
-        where month=10 and dayofweek = 1
-        group by CRSDepTime
-        order by arrdelay
-    ) A
-) where rn between 1 and 5
+select * from stud;
+select * from major;
+select * from emp;
+select * from dept;
+select * from prof;
