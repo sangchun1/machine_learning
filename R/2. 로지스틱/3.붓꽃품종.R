@@ -4,7 +4,7 @@ tail(df)
 ###########################################
 library(dplyr)
 # 필드 제거
-df <- df %>% select(-target)
+df <- df %>% select(-Name)
 head(df)
 dim(df)
 summary(df)
