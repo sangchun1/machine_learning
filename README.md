@@ -31,7 +31,7 @@
 ### 4. 전처리
 파이썬으로 전처리하는 방법을 실습
 ### 5. 회귀분석
-
+파이썬으로 회귀분석 각종 회귑모형 실습
 ### 6. 로지스틱
 로지스틱 모형(logistic model)으로 회귀분석 실습
 ### 7. 의사결정나무
@@ -42,11 +42,13 @@
 <h2 align="center"><img src="https://img.shields.io/badge/-276DC3?&logo=r&logoColor=white"/> R</h2>
 
 ### 1. 회귀분석
-
+R로 회귀분석 각종 회귑모형 실습
 ### 2. 로지스틱
 로지스틱 모형(logistic model)으로 회귀분석 실습
 ### 3. 의사결정나무
 의사결정나무(Decision Tree) 
+### 4. 사례기반추론
+사례기반추론(K-Nearest Neighbor)
 
 <h2 align="center"><img src="https://img.shields.io/badge/-07405E?&logo=sqlite&logoColor=white"/> SQL</h2>
 
