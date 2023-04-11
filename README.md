@@ -38,6 +38,8 @@
 의사결정나무(Decision Tree) 
 ### 8. 사례기반추론
 사례기반추론(K-Nearest Neighbor)
+### 9. SVM
+Support Vector Machine
 
 <h2 align="center"><img src="https://img.shields.io/badge/-276DC3?&logo=r&logoColor=white"/> R</h2>
 
