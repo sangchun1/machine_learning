@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=header&text=machine_learning&fontSize=50)
+![header](https://capsule-render.vercel.app/api?type=waving&customColorList=0&height=200&section=header&text=machine_learning&fontSize=50)
 
 ##
 
@@ -79,4 +79,4 @@ Django를 사용하여 웹 구현
 * memo : 한줄 메모장
 * book : 도서관리
 
-![Footer](https://capsule-render.vercel.app/api?type=waving&color=auto&height=150&section=footer)
+![Footer](https://capsule-render.vercel.app/api?type=waving&customColorList=0&height=150&section=footer)
