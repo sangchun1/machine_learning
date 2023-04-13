@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     "address",
     "memo",
     "book",
+    "transaction",
+    "procedure",
 ]
 
 MIDDLEWARE = [
@@ -84,26 +86,26 @@ WSGI_APPLICATION = "config.wsgi.application"
 #         "NAME": BASE_DIR / "db.sqlite3",
 #     }
 # }
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'pyweb', # DB
-        'USER': '', # id
-        'PASSWORD': '', # password
-        'HOST': '', # host
-        'PORT': '', # port
-    }
-}
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.oracle',
-#         'NAME': 'xe',
-#         'USER': '',
-#         'PASSWORD': '',
-#         'HOST': '',
-#         'PORT': '',
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'pyweb', # DB
+#         'USER': 'web', # id
+#         'PASSWORD': '1234', # password
+#         'HOST': 'localhost', # host
+#         'PORT': '3306', # port
 #     }
 # }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.oracle',
+        'NAME': 'xe',
+        'USER': 'python',
+        'PASSWORD': 'python1234',
+        'HOST': 'localhost',
+        'PORT': '1521',
+    }
+}
 
 
 # Password validation
