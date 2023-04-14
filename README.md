@@ -40,6 +40,10 @@
 사례기반추론(K-Nearest Neighbor)
 ### 9. SVM
 Support Vector Machine
+### 10. 인공신경망(sklearn)
+Scikit-learn 모듈을 사용한 인공신경망 실습
+### 11. 인공신경망(tensorflow)
+Tensorflow 모듈을 사용한 인공신경망 실습
 
 <h2 align="center"><img src="https://img.shields.io/badge/-276DC3?&logo=r&logoColor=white"/> R</h2>
 
@@ -51,6 +55,8 @@ R로 회귀분석 각종 회귀모형 실습
 의사결정나무(Decision Tree) 
 ### 4. 사례기반추론
 사례기반추론(K-Nearest Neighbor)
+### 5. SVM
+Support Vector Machine
 
 <h2 align="center"><img src="https://img.shields.io/badge/-07405E?&logo=sqlite&logoColor=white"/> SQL</h2>
 
@@ -82,5 +88,8 @@ Django를 사용하여 웹 구현
 * address : 주소록
 * memo : 한줄 메모장
 * book : 도서관리
+* transaction : 트랜잭션 처리
+* procedure : 저장프로시저 활용
+* mymember : 회원관리
 
 ![Footer](https://capsule-render.vercel.app/api?type=waving&customColorList=0&height=150&section=footer)

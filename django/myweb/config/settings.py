@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "book",
     "transaction",
     "procedure",
+    "mymember",
 ]
 
 MIDDLEWARE = [
