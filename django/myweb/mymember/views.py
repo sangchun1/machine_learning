@@ -1,9 +1,6 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth.models import User
-from django.contrib.auth import authenticate
-from django.contrib.auth import login as dlogin, logout as dlogout
-#from mymember.models import UserForm, LoginForm
 from mymember.models import Member
+import hashlib
 
 def home(request):
     if 'userid' not in request.session.keys():
@@ -15,6 +12,7 @@ def login(request):
     if request.method == 'POST':
         userid = request.POST['userid']
         passwd = request.POST['passwd']
+        passwd = hashlib.sha256(passwd.encode()).hexdigest()
         row = Member.objects.filter(userid=userid, passwd=passwd)[0]
         if row is not None:
             request.session['userid'] = userid
@@ -29,6 +27,7 @@ def join(request):
     if request.method == 'POST':
         userid = request.POST['userid']
         passwd = request.POST['passwd']
+        passwd = hashlib.sha256(passwd.encode()).hexdigest()
         name = request.POST['name']
         address = request.POST['address']
         tel = request.POST['tel']

@@ -19,9 +19,10 @@ begin
     values ( p_writer, p_memo, sysdate);
 end;
 /
-execute memo_insert_p('±èÃ¶¼ö', '¸Þ¸ð...', '192.168.0.10' );
+execute memo_insert_p('±èÃ¶¼ö', '¸Þ¸ð');
+execute memo_insert_p('¹ÚÃ¶¼ö', '¸Þ¸ð1');
 commit;
-select * from user_source where name='MYMEMO_INSERT_P';
+select * from user_source where name='MEMO_INSERT_P';
 
 -- ¸Þ¸ð ¸ñ·Ï ÇÁ·Î½ÃÀú
 create or replace procedure memo_list_p(v_row out sys_refcursor)
@@ -78,4 +79,17 @@ insert into procedure_emp values (7900,'¹Ú¹ÎÃ¶','»ç¿ø','2011-12-03',395);
 insert into procedure_emp values (7902,'¹ÚÈñ¼º','ºÎÀå','2011-12-03',700);
 insert into procedure_emp values (7934,'ÃÖÃ¶¼ö','»ç¿ø','2012-01-23',330);
 select * from procedure_emp;
+commit;
+
+select * from memo_memo;
+select * from mymember_member;
+desc mymember_member;
+
+select * from ajax_keyword;
+insert into ajax_keyword values (1, 'test1');
+insert into ajax_keyword values (2, 'test2');
+insert into ajax_keyword values (3, 'test3');
+insert into ajax_keyword values (4, 'thanks');
+insert into ajax_keyword values (5, 'thank you');
+select * from ajax_keyword;
 commit;

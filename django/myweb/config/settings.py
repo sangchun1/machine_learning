@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     "transaction",
     "procedure",
     "mymember",
+    "ajax",
 ]
 
 MIDDLEWARE = [

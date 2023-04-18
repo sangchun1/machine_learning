@@ -13,5 +13,4 @@ urlpatterns = [
     path('view_memo_p', views.view_memo_p),
     path('delete_memo_p', views.delete_memo_p),
     path('update_memo_p', views.update_memo_p),
-
 ]
