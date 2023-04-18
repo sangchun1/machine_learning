@@ -57,6 +57,8 @@ R로 회귀분석 각종 회귀모형 실습
 사례기반추론(K-Nearest Neighbor)
 ### 5. SVM
 Support Vector Machine
+### 6. 인공신경망
+R을 사용한 인공신경망 실습
 
 <h2 align="center"><img src="https://img.shields.io/badge/-07405E?&logo=sqlite&logoColor=white"/> SQL</h2>
 
@@ -91,5 +93,6 @@ Django를 사용하여 웹 구현
 * transaction : 트랜잭션 처리
 * procedure : 저장프로시저 활용
 * mymember : 회원관리
+* ajax : ajax
 
 ![Footer](https://capsule-render.vercel.app/api?type=waving&customColorList=0&height=150&section=footer)
