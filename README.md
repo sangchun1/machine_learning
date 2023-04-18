@@ -44,6 +44,8 @@ Support Vector Machine
 Scikit-learn 모듈을 사용한 인공신경망 실습
 ### 11. 인공신경망(tensorflow)
 Tensorflow 모듈을 사용한 인공신경망 실습
+### 12. 정형분류 실습
+챕터 6부터 11까지 배운 내용으로 정형데이터 분류 실습
 
 <h2 align="center"><img src="https://img.shields.io/badge/-276DC3?&logo=r&logoColor=white"/> R</h2>
 
