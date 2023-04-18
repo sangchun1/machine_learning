@@ -4,11 +4,11 @@
 #Sys.setenv(JAVA_HOME='C:/Program Files/Java/jdk1.8.0_211')
 library(h2o)
 #h2o에 접속
-# localH2O = h2o.init(ip="localhost", port = 54321, nthreads=-1)
+localH2O = h2o.init(ip="localhost", port = 54321, nthreads=-1)
 localH2O = h2o.init()
 # http://localhost:54321 접속
-train <- h2o.importFile("d:/data/iris/iris.csv")
-test <- h2o.importFile("d:/data/iris/iris.csv")
+train <- h2o.importFile("c:/data/iris/iris.csv")
+test <- h2o.importFile("c:/data/iris/iris.csv")
 X <- names(train)[1:4]
 y <- names(train)[6]
 train[,y] <- as.factor(train[,y])

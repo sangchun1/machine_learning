@@ -28,7 +28,7 @@ set.seed(123)
 model <- neuralnet(as.factor(Species) ~ ., data=train,
                    hidden=10, threshold=0.01, linear.output = F)
 #model$result.matrix #가중치 정보
-win.graph(); plot(model)
+plot(model)
 pred<-predict(model, X_test, type='prob')
 pred
 # apply(x, direction, function) direction: 1 행방향, 2 열방향
