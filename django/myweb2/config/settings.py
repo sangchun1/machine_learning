@@ -11,8 +11,6 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-from django.conf.locale.ko import formats as ko_formats
-ko_formats.DATETIME_FORMAT = 'Y-m-d G:i:s'
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -39,15 +37,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "address",
-    "memo",
-    "book",
-    "transaction",
-    "procedure",
-    "mymember",
-    "ajax",
-    "debug_toolbar",
-    "survey",
+    "mytest",
 ]
 
 MIDDLEWARE = [
@@ -58,10 +48,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
-
-INTERNAL_IPS = ("127.0.0.1",)
 
 ROOT_URLCONF = "config.urls"
 
@@ -93,27 +80,16 @@ WSGI_APPLICATION = "config.wsgi.application"
 #         "NAME": BASE_DIR / "db.sqlite3",
 #     }
 # }
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'pyweb', # DB
-#         'USER': 'web', # id
-#         'PASSWORD': '1234', # password
-#         'HOST': 'localhost', # host
-#         'PORT': '3306', # port
-#     }
-# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.oracle',
-        'NAME': 'xe',
-        'USER': 'python',
-        'PASSWORD': 'python1234',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'pyweb',
+        'USER': 'web',
+        'PASSWORD': '1234',
         'HOST': 'localhost',
-        'PORT': '1521',
+        'PORT': '3306',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -137,9 +113,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = "ko"
+LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "Asia/Seoul"
+TIME_ZONE = "UTC"
 
 USE_I18N = True
 

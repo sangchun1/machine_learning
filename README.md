@@ -89,6 +89,7 @@ jQuery
 <h2 align="center"><img src="https://img.shields.io/badge/-092E20?style=&logo=django&logoColor=white"/> Django</h2>
 
 Django를 사용하여 웹 구현
+### myweb
 * address : 주소록
 * memo : 한줄 메모장
 * book : 도서관리
@@ -96,5 +97,8 @@ Django를 사용하여 웹 구현
 * procedure : 저장프로시저 활용
 * mymember : 회원관리
 * ajax : ajax
+### myweb2
+* ch01 : 기본 기능
+* ch02 : 폼데이터 처리
 
 ![Footer](https://capsule-render.vercel.app/api?type=waving&customColorList=0&height=150&section=footer)
