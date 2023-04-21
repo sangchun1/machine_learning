@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from mytest.models import Salary
 
 def age(request):
     try:
@@ -35,9 +36,39 @@ def salary(request):
     total = sal * 12 + bonus
     tax = total * 5 / 100
     money = total - tax
+
+    salary = Salary(name=name, sal=sal, bonus=bonus, total=total, tax=tax, money=money)
+    salary.save()
+
     return render(request, 'ch02/salary_result.html',
                   {'name': name, 'sal': sal, 'bonus': bonus,
                    'total': total, 'tax': tax, 'money': money})
+
+def salary_list(request):
+    items = Salary.objects.order_by('id')
+    return render(request, 'ch02/salary_list.html', {'items': items})
+
+def salary_detail(request):
+    item = Salary.objects.get(id=request.GET['id'])
+    return render(request, 'ch02/salary_detail.html', {'item': item})
+
+def salary_update(request):
+    id = request.POST['id']
+    sal = int(request.POST['sal'])
+    bonus = int(request.POST['bonus'])
+    total = sal * 12 + bonus
+    tax = total * 5 / 100
+    money = total - tax
+
+    item = Salary(id=id, name=request.POST['name'], sal=sal, bonus=bonus,
+                  total=total, tax=tax, money=money)
+    item.save()
+    return redirect("/salary_list")
+
+
+def salary_delete(request):
+    Salary.objects.get(id=request.POST['id']).delete()
+    return redirect('/salary_list')
 
 def radio(request):
     try:
