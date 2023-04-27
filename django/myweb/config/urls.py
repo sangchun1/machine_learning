@@ -32,6 +32,7 @@ urlpatterns = [
     path('mymember/', include('mymember.urls')),
     path('ajax/', include('ajax.urls')),
     path('survey/', include('survey.urls')),
+    path('guestbook/', include('guestbook.urls')),
 ]
 
 if settings.DEBUG:

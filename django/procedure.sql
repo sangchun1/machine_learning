@@ -93,3 +93,6 @@ insert into ajax_keyword values (4, 'thanks');
 insert into ajax_keyword values (5, 'thank you');
 select * from ajax_keyword;
 commit;
+
+select * from guestbook_guestbook;
+desc guestbook_guestbook;

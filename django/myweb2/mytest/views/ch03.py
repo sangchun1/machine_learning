@@ -26,22 +26,32 @@ def change_cookie(request):
     return response
 
 def counter(request):
-    if request.COOKIES['last_visit']:
+    try:
         last_visit = request.COOKIES['last_visit']
         visits = request.COOKIES['visits']
-        int_visit = int(visits) + 1
         t1 = datetime.strptime(str(datetime.now()), '%Y-%m-%d %H:%M:%S.%f')
         t2 = datetime.strptime(last_visit, '%Y-%m-%d %H:%M:%S.%f')
+
+        int_visit = int(visits) + 1
+        # strVisits = str(int_visit)
+        # strLastVisit = str(datetime.now())
+
+        # 시간제한
+        if (t1 - t2).seconds > 1:
+            int_visit = int(visits) + 1
+            strVisits = str(int_visit)
+            strLastVisit = str(datetime.now())
+        else:
+            strVisits = visits
+            strLastVisit = last_visit
+    except:
+        strVisits = '1'
+        strLastVisit = str(datetime.now())
+
     result = []
-    for i in range(0, len(str(visits))):
-        result.append(f'{visits[i]}.gif')
-    context = {"result": result}
-    response = render(request, 'ch03/counter.html', context)
-    if request.COOKIES['last_visit']:
-        if (t1 - t2).seconds > 3:
-            response.set_cookie('visits', str(int_visit))
-            response.set_cookie('last_visit', str(datetime.now()))
-    else:
-        response.set_cookie('last_visit', str(datetime.now()))
-        response.set_cookie('visits', 1)
+    for i in range(0, len(strVisits)):
+        result.append(f'{strVisits[i]}.gif')
+    response = render(request, 'ch03/counter.html', {"result": result})
+    response.set_cookie('visits', strVisits)
+    response.set_cookie('last_visit', strLastVisit)
     return response
