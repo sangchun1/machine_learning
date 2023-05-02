@@ -96,3 +96,5 @@ commit;
 
 select * from guestbook_guestbook;
 desc guestbook_guestbook;
+
+select * from auth_user;

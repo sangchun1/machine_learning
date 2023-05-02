@@ -97,8 +97,15 @@ Django를 사용하여 웹 구현
 * procedure : 저장프로시저 활용
 * mymember : 회원관리
 * ajax : ajax
+* survey : 설문조사
+* guestbook : 방명록
+* shop : 상품관리
 ### myweb2
 * ch01 : 기본 기능
 * ch02 : 폼데이터 처리
+* ch03 : 에러 처리
+* ch04 : 쿠키와 세션
+### myweb3
+* board : 게시판
 
 ![Footer](https://capsule-render.vercel.app/api?type=waving&customColorList=0&height=150&section=footer)
