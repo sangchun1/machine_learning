@@ -46,6 +46,14 @@ Scikit-learn 모듈을 사용한 인공신경망 실습
 Tensorflow 모듈을 사용한 인공신경망 실습
 ### 12. 정형분류 실습
 챕터 6부터 11까지 배운 내용으로 정형데이터 분류 실습
+### 13. 클러스터링
+파이썬으로 클러스터링 실습
+### 14. 시계열 분석
+파이썬으로 시계열 분석 실습
+### 15. 연관규칙 분석
+파이썬으로 연관규칙 분석 실습
+### 16. 주성분 분석
+파이썬으로 주성분 분석 실습
 
 <h2 align="center"><img src="https://img.shields.io/badge/-276DC3?&logo=r&logoColor=white"/> R</h2>
 
@@ -61,6 +69,14 @@ R로 회귀분석 각종 회귀모형 실습
 Support Vector Machine
 ### 6. 인공신경망
 R을 사용한 인공신경망 실습
+### 7. 클러스터링
+R을 사용하여 클러스터링 실습
+### 8. 시계열 분석
+R을 사용하여 시계열 분석 실습
+### 9. 연관규칙 분석
+R을 사용하여 연관규칙 분석 실습
+### 10. 주성분 분석
+R을 사용하여 주성분 분석 실습
 
 <h2 align="center"><img src="https://img.shields.io/badge/-07405E?&logo=sqlite&logoColor=white"/> SQL</h2>
 
@@ -107,5 +123,7 @@ Django를 사용하여 웹 구현
 * ch04 : 쿠키와 세션
 ### myweb3
 * board : 게시판
+### react
+* django와 react의 연동
 
 ![Footer](https://capsule-render.vercel.app/api?type=waving&customColorList=0&height=150&section=footer)
