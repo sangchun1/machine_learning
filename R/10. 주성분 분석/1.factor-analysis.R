@@ -12,7 +12,6 @@ head(testData)
 data<-cor(testData)
 data
 eigen(data)
-eigen() decomposition
 ###############################################
 #3개의 값이 유의하다고 보여지므로 요인분석 실시
 #데이터를 3개로 요약

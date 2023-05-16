@@ -23,6 +23,14 @@ auto.arima(dust)
 # 파라미터가 가장 적은 모형을 선택하는 것을 추천함 => AR(2) 적용 => c(2,0,0)
 # MA(3)을 선택한다면 => c(0,0,3)
 ########################################
-dust_arima <- arima(dust, order = c(2,0,0))
-dust_fcast <- forecast(dust_arima, h = 30)
-plot(dust_fcast)
+dust_arima1 <- arima(dust, order = c(1,0,2))
+dust_fcast1 <- forecast(dust_arima1, h = 30)
+plot(dust_fcast1)
+########################################
+dust_arima2 <- arima(dust, order = c(2,0,0))
+dust_fcast2 <- forecast(dust_arima2, h = 30)
+plot(dust_fcast2)
+########################################
+dust_arima3 <- arima(dust, order = c(0,0,3))
+dust_fcast3 <- forecast(dust_arima3, h = 30)
+plot(dust_fcast3)

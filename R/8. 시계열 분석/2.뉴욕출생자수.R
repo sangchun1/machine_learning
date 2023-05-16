@@ -41,4 +41,4 @@ birth_arima
 ########################################
 birth_fcast <- forecast(birth_arima)
 birth_fcast
-win.graph(); plot(birth_fcast, main = "Forecasts 1960 & 1961")
+plot(birth_fcast, main = "Forecasts 1960 & 1961")

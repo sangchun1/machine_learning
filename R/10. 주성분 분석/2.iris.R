@@ -10,6 +10,7 @@ plot(ir.pca, type="l")
 ###############################################
 summary(ir.pca)
 ###############################################
+PRC<-as.matrix(log.ir) %*% ir.pca$rotation
 head(PRC)
 ###############################################
 train1<-cbind(ir.species, as.data.frame(PRC))

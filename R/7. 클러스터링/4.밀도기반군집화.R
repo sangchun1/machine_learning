@@ -1,5 +1,9 @@
 #install.packages('fpc')
 library(fpc)
+df<-read.csv("c:/data/iris/iris.csv")
+library(dplyr)
+df<-df %>% select(-Name)
+df
 iris2 <- df[-5] # 5번 필드 제외
 #밀도기반 군집화 eps 중심점과의 거리, MinPts 최소 샘플 개수
 ds <- dbscan(iris2, eps=0.42, MinPts=5)

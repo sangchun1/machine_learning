@@ -58,8 +58,7 @@ plot(avgsil,type="l")
 #install.packages("factoextra")
 library(factoextra)
 fviz_nbclust(df_scaled[,-5], FUN=kmeans, method = "wss")
-fviz_nbclust(df_scaled[,-5], FUN=kmeans, method =
-               "silhouette")
+fviz_nbclust(df_scaled[,-5], FUN=kmeans, method = "silhouette")
 #산점도 행렬(클러스터가 3개일 경우)
 plot(df_scaled[,-5], pch=result[[3]]$cluster,
      col=result[[3]]$cluster)
@@ -80,9 +79,9 @@ convert <- function(i){
   if( i == 0){
     return("0")
   }else if (i==1){
-    return("2")
-  }else if (i==2){
     return("1")
+  }else if (i==2){
+    return("2")
   }
 }
 #각 샘플에 convert() 함수를 적용

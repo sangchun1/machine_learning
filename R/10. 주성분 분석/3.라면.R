@@ -1,4 +1,5 @@
-data<-read.table("c:/data/noodle/noodle.txt",header=T)
+data<-read.table("c:/data/noodle/noodle.txt", header=T,
+                 fileEncoding = "euc-kr")
 data
 summary(data)
 cor(data)

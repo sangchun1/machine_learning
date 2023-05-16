@@ -2,8 +2,7 @@ v1<-c(1,3,6,10,18)
 #거리행렬
 d1<-dist(v1)
 d1
-#거리행렬 모델(average 평균기준, complete 최장거리기준, 
-#single 최단거리기준, median 중앙값기준)
+#거리행렬 모델(average 평균기준, complete 최장거리기준, single 최단거리기준, median 중앙값기준)
 m1<-hclust(d1, method='average')
 m1
 #2개의 클러스터로 구분
