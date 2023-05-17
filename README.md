@@ -54,6 +54,8 @@ Tensorflow 모듈을 사용한 인공신경망 실습
 파이썬으로 연관규칙 분석 실습
 ### 16. 주성분 분석
 파이썬으로 주성분 분석 실습
+### 17. 텍스트 마이닝
+파이썬으로 텍스트 마이닝 분석
 
 <h2 align="center"><img src="https://img.shields.io/badge/-276DC3?&logo=r&logoColor=white"/> R</h2>
 
@@ -124,6 +126,8 @@ Django를 사용하여 웹 구현
 ### myweb3
 * board : 게시판
 ### react
-* django와 react의 연동
+* django와 react의 연동하여 상품목록 구현
+### chatbot
+* 챗봇 만들기
 
 ![Footer](https://capsule-render.vercel.app/api?type=waving&customColorList=0&height=150&section=footer)
