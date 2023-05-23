@@ -60,6 +60,8 @@ Tensorflow 모듈을 사용한 인공신경망 실습
 파이썬과 장고를 사용하여 음식 주문하는 챗봇 만들기
 ### 19. 이미지 분석
 파이썬으로 이미지 분석 실습
+### 20. PyTorch
+PyTorch 패키지로 이미지 분석 실습
 
 <h2 align="center"><img src="https://img.shields.io/badge/-276DC3?&logo=r&logoColor=white"/> R</h2>
 
@@ -86,7 +88,7 @@ R을 사용하여 주성분 분석 실습
 
 <h2 align="center"><img src="https://img.shields.io/badge/-07405E?&logo=sqlite&logoColor=white"/> SQL</h2>
 
-각종 SQL 서버(Oracle, MySQL, SQLite, PL/SQL, SQLServer)로 SQL 문법 실습
+* 각종 SQL 서버(Oracle, MySQL, SQLite, PL/SQL, SQLServer)로 SQL 문법 실습
 
 <h2 align="center"><img src="https://img.shields.io/badge/-239120?&logo=html5&logoColor=white"/> HTML/CSS</h2>
 
@@ -110,7 +112,7 @@ jQuery
 
 <h2 align="center"><img src="https://img.shields.io/badge/-092E20?style=&logo=django&logoColor=white"/> Django</h2>
 
-Django를 사용하여 웹 구현
+* Django를 사용하여 웹 구현
 ### myweb
 * address : 주소록
 * memo : 한줄 메모장
