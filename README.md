@@ -7,10 +7,8 @@
   <img src="https://img.shields.io/badge/R-276DC3?&logo=r&logoColor=white"/>
   <img src="https://img.shields.io/badge/SQLite-07405E?&logo=sqlite&logoColor=white"/>
   <img src="https://img.shields.io/badge/MySQL-005C84?&logo=mysql&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Microsoft%20SQL%20Server-CC2927?&logo=microsoft%20sql%20server&logoColor=white"/>
 </div>
 <div align="center">
-  <img src="https://img.shields.io/badge/MongoDB-4EA94B?&logo=mongodb&logoColor=white"/>
   <img src="https://img.shields.io/badge/Oracle-F80000?&logo=oracle&logoColor=white"/>
   <img src="https://img.shields.io/badge/HTML-239120?&logo=html5&logoColor=white"/>
   <img src="https://img.shields.io/badge/CSS-239120?&logo=css3&logoColor=white"/>
