@@ -59,7 +59,15 @@ Tensorflow 모듈을 사용한 인공신경망 실습
 ### 19. 이미지 분석
 파이썬으로 이미지 분석 실습
 ### 20. PyTorch
-PyTorch 패키지로 이미지 분석 실습
+PyTorch 모듈로 이미지 분석 실습
+### 21. OpenCV
+OpenCV 모듈로 이미지 분석 실습
+### 22. OpenCV2
+OpenCV 모듈로 추가 이미지 분석 실습
+### 23. PyTorch2
+PyTorch 모듈로 추가 이미지 분석 실습
+### 24. 강화학습
+파이썬으로 강화학습 실습
 
 <h2 align="center"><img src="https://img.shields.io/badge/-276DC3?&logo=r&logoColor=white"/> R</h2>
 
